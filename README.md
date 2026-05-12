@@ -1,2 +1,3 @@
-# primer-parcial_ig2026
-
+Agustín Nicolás Iglesias
+Primer Parcial - Informática General  
+Artes Multimediales - UNA 
