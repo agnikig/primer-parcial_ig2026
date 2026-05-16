@@ -1,27 +1,50 @@
-/*    1. RESET BÁSICO (Clase 04)    */
+/*    1. RESET BÁSICO    */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Caja calculada correctamente */
 }
 
-/*    2. CUERPO Y FONDO (Requisito: Fondo en las 3 páginas)    */
+/*    2. CUERPO Y FONDO   */
 body {
-    background-image: url('../img/fondo.png'); /* Imagen de fondo obligatoria */
+    background-image: url('../img/fondo.png'); /* Imagen de fondo */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     font-family: 'Lato', sans-serif; /* Tipografía base para el texto */
     line-height: 1.6;
-    color: #ffffff; /* Color de texto claro para garantizar legibilidad */
+    color: #ffffff; /* Color de texto */
 }
 
-/*    3. CONTENEDOR GLOBAL (Único uso permitido de PX para max-width)    */
+blockquote p strong {
+    display: block;
+    margin-top: 0.5rem;
+    color: #00ced1; /* Mantiene el color celeste*/
+}
+
+/*    3. CONTENEDOR GLOBAL    */
 #contenedor {
     max-width: 1000px; /* Ancho máximo estricto en píxeles */
     margin: 0 auto;    /* Centra el bloque contenedor en la pantalla */
-    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro para legibilidad */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro con transparencia para mayor legibilidad */
     min-height: 100vh;
+}
+
+.video-seccion {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.contenedor-video {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: left;
+}
+
+.contenedor-video iframe {
+    max-width: 100%; /* Evita que se desborde en pantallas chicas */
+    border: 2px solid #00ced1; /* un borde sutil color celeste */
+    border-radius: 8px;
 }
 
 /*    4. ENCABEZADO (HEADER)    */
@@ -29,16 +52,22 @@ header {
     background-color: #000000;
     padding: 2rem; /* Espaciado interno exclusivo en rem */
     text-align: center;
-    border-bottom: 0.2rem solid #00ced1; /* Cambiado a rem para cumplir la regla */
+    border-bottom: 0.2rem solid #00ced1;
 }
 
 header h1 {
-    font-family: 'Arvo', serif; /* Tipografía obligatoria de Google Fonts */
+    font-family: 'Arvo', serif; /* Tipografía Arvo de Google Fonts */
     font-size: 2rem;            /* Medida en rem */
-    letter-spacing: 0.2rem;     /* Cambiado a rem */
+    letter-spacing: 0.2rem;     
 }
 
-/*    5. MENÚ DE NAVEGACIÓN HORIZONTAL (Requisito Técnico)    */
+/* Estilos para el link del h1 */
+header h1 a.link-home {
+    color: #fff; /* O el color que prefieras para tu título */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+}
+
+/*    5. MENÚ DE NAVEGACIÓN HORIZONTAL    */
 nav {
     background-color: #111111;
 }
@@ -99,7 +128,7 @@ h3 {
     font-family: 'Arvo', serif; /* Tipografía obligatoria de Google Fonts */
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    border-left: 0.4rem solid #00ced1; /* Cambiado a rem */
+    border-left: 0.4rem solid #00ced1; 
     padding-left: 0.5rem;
 }
 
@@ -119,8 +148,8 @@ blockquote {
     margin: 2rem 0;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
-    border-top: 0.1rem solid #333333;    /* Cambiado a rem */
-    border-bottom: 0.1rem solid #333333; /* Cambiado a rem */
+    border-top: 0.1rem solid #333333;    
+    border-bottom: 0.1rem solid #333333; 
     text-align: center;
 }
 
@@ -130,7 +159,7 @@ blockquote cite {
     color: #00ced1;
 }
 
-/*    7. IMÁGENES (Requisito: Porcentajes para anchos de bloques)    */
+/*    7. IMÁGENES   */
 img {
     max-width: 100%; /* Ancho relativo en porcentaje */
     height: auto;
@@ -143,7 +172,7 @@ footer {
     background-color: #000000;
     padding: 1.5rem;
     text-align: center;
-    border-top: 0.1rem solid #222222; /* Cambiado a rem */
+    border-top: 0.1rem solid #222222; 
 }
 
 footer p {
@@ -151,4 +180,18 @@ footer p {
     font-size: 0.9rem;
     color: #666666;
     text-align: center;
+}
+
+footer address {
+    font-style: normal; /* Quita la cursiva por defecto del navegador */
+    margin-top: 0.5rem; /* Le da un pequeño espacio respecto al texto anterior usando rem */
+}
+
+footer address a {
+    color: #00ced1; /* Mantiene el color celeste de los links */
+    text-decoration: none;
+}
+
+footer address a:hover {
+    text-decoration: underline;
 }
