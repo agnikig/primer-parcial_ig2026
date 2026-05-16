@@ -1,101 +1,105 @@
-/* 1. Reset básico */
+/*    1. RESET BÁSICO (Clase 04)    */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Caja calculada correctamente */
 }
 
-/* 2. Cuerpo y la imagen de Fondo obligatoria */
+/*    2. CUERPO Y FONDO (Requisito: Fondo en las 3 páginas)    */
 body {
-    background-image: url('../img/fondo.png');
+    background-image: url('../img/fondo.png'); /* Imagen de fondo obligatoria */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /* Tipografía base para el texto */
     line-height: 1.6;
-    color: #fff; /* Texto claro para que contraste con el fondo oscuro/azul */
+    color: #ffffff; /* Color de texto claro para garantizar legibilidad */
 }
 
-/* 3. Bloque contenedor obligatorio con ancho máximo en PX */
+/*    3. CONTENEDOR GLOBAL (Único uso permitido de PX para max-width)    */
 #contenedor {
-    max-width: 1000px;
-    margin: 0 auto; /* Centra todo el sitio */
-    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente para legibilidad */
+    max-width: 1000px; /* Ancho máximo estricto en píxeles */
+    margin: 0 auto;    /* Centra el bloque contenedor en la pantalla */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro para legibilidad */
     min-height: 100vh;
 }
 
-/* 4. Encabezado */
+/*    4. ENCABEZADO (HEADER)    */
 header {
-    background-color: #000;
-    padding: 2rem;
+    background-color: #000000;
+    padding: 2rem; /* Espaciado interno exclusivo en rem */
     text-align: center;
-    border-bottom: 2px solid #00ced1;
+    border-bottom: 0.2rem solid #00ced1; /* Cambiado a rem para cumplir la regla */
 }
 
 header h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-family: 'Arvo', serif; /* Tipografía obligatoria de Google Fonts */
+    font-size: 2rem;            /* Medida en rem */
+    letter-spacing: 0.2rem;     /* Cambiado a rem */
 }
 
-/* 5. Menú de Navegación HORIZONTAL */
+/*    5. MENÚ DE NAVEGACIÓN HORIZONTAL (Requisito Técnico)    */
 nav {
-    background-color: #111;
+    background-color: #111111;
 }
 
 nav ul {
     list-style: none;
-    display: flex; /* Flexbox estándar de la clase 4 para alinear en fila */
+    display: flex; /* Flexbox para formato estrictamente horizontal */
     justify-content: space-around;
 }
 
 nav ul li {
-    width: 33.33%; /* Divide el espacio equitativamente */
+    width: 33.33%; /* Ancho de bloque en porcentaje */
     text-align: center;
 }
 
-/* Comportamiento obligatorio de todos los estados de los links */
+/* --- ESTADOS OBLIGATORIOS DE LOS LINKS --- */
 nav ul li a:link {
     display: block;
-    padding: 1rem 0;
-    color: #fff;
+    padding: 1rem 0; /* Unidades rem */
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
 }
 
 nav ul li a:visited {
-    color: #fff;
+    color: #ffffff; /* Define explícitamente el estado visitado */
 }
 
 nav ul li a:hover {
     background-color: #00ced1;
-    color: #000;
+    color: #000000;
     transition: 0.3s;
 }
 
 nav ul li a:active {
     background-color: #008b8b;
-    color: #fff;
+    color: #ffffff; /* Estado activo al hacer clic */
 }
 
-/* 6. Área de Contenido */
+/*    6. ÁREA DE CONTENIDO (MAIN & JERARQUÍAS)    */
 main {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem; /* Márgenes internos en rem */
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; /* Espaciado en rem */
 }
 
+/* Títulos obligatorios con la fuente Arvo */
 h2 {
+    font-family: 'Arvo', serif; /* Tipografía obligatoria de Google Fonts */
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #00ced1;
 }
 
 h3 {
+    font-family: 'Arvo', serif; /* Tipografía obligatoria de Google Fonts */
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    border-left: 4px solid #00ced1;
+    border-left: 0.4rem solid #00ced1; /* Cambiado a rem */
     padding-left: 0.5rem;
 }
 
@@ -108,15 +112,15 @@ p {
 .destacado {
     font-size: 1.3rem;
     font-style: italic;
-    color: #ccc;
+    color: #cccccc;
 }
 
 blockquote {
     margin: 2rem 0;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 0.1rem solid #333333;    /* Cambiado a rem */
+    border-bottom: 0.1rem solid #333333; /* Cambiado a rem */
     text-align: center;
 }
 
@@ -126,25 +130,25 @@ blockquote cite {
     color: #00ced1;
 }
 
-/* 7. Imágenes (Uso de porcentajes) */
+/*    7. IMÁGENES (Requisito: Porcentajes para anchos de bloques)    */
 img {
-    max-width: 100%;
+    max-width: 100%; /* Ancho relativo en porcentaje */
     height: auto;
     display: block;
-    margin: 2rem auto;
+    margin: 2rem auto; /* Separación en rem */
 }
 
-/* 8. Pie de página */
+/*    8. PIE DE PÁGINA (FOOTER)    */
 footer {
-    background-color: #000;
+    background-color: #000000;
     padding: 1.5rem;
     text-align: center;
-    border-top: 1px solid #222;
+    border-top: 0.1rem solid #222222; /* Cambiado a rem */
 }
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #666;
+    color: #666666;
     text-align: center;
 }
